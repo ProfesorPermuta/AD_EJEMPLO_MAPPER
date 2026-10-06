@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Djinn de Golden Sun</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Djinn de Golden Sun</h1>
+        <p>Ejemplo didáctico: página web + API REST</p>
+    </header>
+
+    <main>
+        <p id="message" class="message" hidden></p>
+
+        <section class="card">
+            <h2>Nuevo djinn</h2>
+            <form id="djinn-form">
+                <label>Nombre <input id="name" required></label>
+                <label>Elemento
+                    <select id="element" required>
+                        <option value="VENUS">Venus</option>
+                        <option value="MARS">Mars</option>
+                        <option value="JUPITER">Jupiter</option>
+                        <option value="MERCURY">Mercury</option>
+                    </select>
+                </label>
+                <label>Juego
+                    <select id="game" required>
+                        <option value="GOLDEN_SUN">Golden Sun</option>
+                        <option value="THE_LOST_AGE">The Lost Age</option>
+                        <option value="DARK_DAWN">Dark Dawn</option>
+                    </select>
+                </label>
+                <label>Ubicación <input id="location" required></label>
+                <label>Efecto <input id="effect" required></label>
+                <label>Poder de invocación <input id="summonPower" type="number" min="0" value="0" required></label>
+
+                <div class="actions">
+                    <button type="submit" id="submit-btn">Crear</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Djinn registrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th><th>ID</th><th>Nombre</th><th>Elemento</th><th>Juego</th>
+                        <th>Ubicación</th><th>Efecto</th><th>Poder</th><th>Estado</th><th></th>
+                    </tr>
+                </thead>
+                <tbody id="djinn-list"></tbody>
+            </table>
+            <p id="empty" hidden>Todavía no hay djinn dados de alta.</p>
+        </section>
+    </main>
+
+    <div id="backdrop" class="backdrop" hidden></div>
+    <aside id="detail-panel" class="sidebar" aria-hidden="true">
+        <button id="detail-close" class="secondary close" aria-label="Cerrar">&times;</button>
+        <h2>Detalle del djinn</h2>
+        <p id="detail-status" hidden></p>
+        <div id="detail-content" hidden>
+            <img id="detail-img" class="detail-img" alt="">
+            <dl id="detail-fields"></dl>
+        </div>
+    </aside>
+
+    <!-- Zona de acceso a la API: solo aquí se hace fetch -->
+    <script src="js/api.js"></script>
+    <!-- Zona de interfaz: usa DjinnApi, nunca llama a fetch directamente -->
+    <script src="js/app.js"></script>
+</body>
+</html>

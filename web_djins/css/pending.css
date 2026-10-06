@@ -1,0 +1,95 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3a2a1b;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #3b2a14;
+}
+
+.guide { width: 100%; max-width: 760px; padding: 1rem; }
+
+.parchment {
+    background: #f2e4bd;
+    border: 6px solid #8a6a3b;
+    border-radius: 14px;
+    box-shadow: 0 0 0 3px #d8c18a inset, 0 6px 20px rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+.parchment-header {
+    background: #d9bd7b;
+    border-bottom: 3px solid #8a6a3b;
+    padding: .4rem 1rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+}
+
+.parchment-body {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+}
+.text { flex: 1; }
+.text h1 { margin: 0 0 .5rem; font-size: 1.6rem; }
+.text p { margin: 0 0 1rem; line-height: 1.4; }
+
+dl { margin: 0; }
+dt { font-weight: 700; margin-top: .75rem; }
+dd { margin: .2rem 0 0; line-height: 1.4; }
+dd ul, dd ol { margin: 0; padding-left: 1.25rem; }
+
+code {
+    background: rgba(138, 106, 59, .18);
+    padding: .1rem .4rem;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+}
+
+.badge {
+    display: inline-block;
+    padding: .1rem .6rem;
+    border-radius: 4px;
+    background: #8a6a3b;
+    color: #fff;
+    font-family: Consolas, monospace;
+    font-weight: 700;
+}
+
+.mascot {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    align-self: flex-start;
+    animation: float 2.4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+.parchment-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background: #b3261e;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-top: 3px solid #7d1b15;
+    font-weight: 700;
+}
+.parchment-footer a { color: #fff; }
+
+@media (max-width: 600px) {
+    .parchment-body { flex-direction: column-reverse; align-items: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mascot { animation: none; }
+}

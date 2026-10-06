@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Endpoint pendiente - Djinn Guide</title>
+    <link rel="stylesheet" href="css/pending.css">
+</head>
+<body>
+    <main class="guide">
+        <section class="parchment">
+            <div class="parchment-header">Guía del alumno</div>
+
+            <div class="parchment-body">
+                <div class="text">
+                    <h1 id="title">Endpoint no encontrado</h1>
+                    <p id="summary"></p>
+
+                    <dl>
+                        <dt>Método</dt>
+                        <dd><span id="method" class="badge"></span></dd>
+
+                        <dt>Endpoint esperado</dt>
+                        <dd><code id="path"></code></dd>
+
+                        <dt>Parámetros</dt>
+                        <dd id="params"></dd>
+
+                        <dt>Respuesta esperada</dt>
+                        <dd id="response"></dd>
+
+                        <dt>Qué debería hacer</dt>
+                        <dd id="steps"></dd>
+                    </dl>
+                </div>
+                <img src="img/mars.png" alt="Djinn" class="mascot">
+            </div>
+
+            <div class="parchment-footer">
+                <span id="footer">El API respondió 404: este endpoint todavía no existe.</span>
+                <a href="index.html">Volver</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/pending.js"></script>
+</body>
+</html>
