@@ -1,2 +1,37 @@
+# --- Dependencias y build ---
 node_modules/
+build/
+.gradle/
+out/
+bin/
+target/
+!gradle/wrapper/gradle-wrapper.jar
+
+# --- IDE / editor ---
 .vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated
+.sts4-cache/
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs y temporales ---
+*.log
+npm-debug.log*
+*.tmp
+*.swp
+HELP.md
+
+# --- Configuración local y secretos ---
+.env
+.env.*
+*.pem
+application-local.properties
